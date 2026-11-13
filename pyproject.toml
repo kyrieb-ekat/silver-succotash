@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chantlabel"
+version = "0.1.0"
+description = "Staff lines, neumes and staff positions for square-notation chant leaves, with Neon-compatible MEI output"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "opencv-python-headless>=4.8",
+  "scikit-image>=0.21",
+]
+
+[project.optional-dependencies]
+pdf = ["PyMuPDF>=1.23"]
+test = ["pytest>=7"]
+
+[project.scripts]
+chantlabel = "chantlabel.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["chantlabel*"]
+
+[tool.setuptools.package-data]
+chantlabel = ["viewer_template/*.html"]

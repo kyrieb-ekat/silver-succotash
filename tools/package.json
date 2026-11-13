@@ -1,0 +1,6 @@
+{
+  "name": "chantlabel-tools",
+  "private": true,
+  "type": "module",
+  "dependencies": { "verovio": "6.4.1" }
+}
